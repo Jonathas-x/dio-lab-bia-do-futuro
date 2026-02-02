@@ -5,39 +5,65 @@
 ### Problema
 > Qual problema financeiro seu agente resolve?
 
-[Sua descrição aqui]
+Usuários têm dificuldade em entender, organizar e tomar decisões sobre suas finanças pessoais no dia a dia. Isso inclui falta de clareza sobre gastos, risco de endividamento, esquecimentos de contas, e dúvidas frequentes sobre conceitos financeiros básicos — tudo isso sem acesso fácil a um consultor humano.
 
 ### Solução
 > Como o agente resolve esse problema de forma proativa?
 
-[Sua descrição aqui]
+Analisa informações fornecidas pelo usuário (gastos, renda, objetivos)
+
+Identifica padrões de risco (ex: gastos acima do orçamento)
+
+Oferece explicações simples e personalizadas
+
+Envia alertas e recomendações educativas
+
+Orienta decisões financeiras sem executar investimentos ou transações
+
+Ele é proativo ao sugerir ajustes, lembrar prazos importantes e educar o usuário financeiramente, sempre respeitando limites de segurança.
 
 ### Público-Alvo
 > Quem vai usar esse agente?
 
-[Sua descrição aqui]
+- Pessoas físicas que querem organizar finanças pessoais
+
+- Jovens adultos e iniciantes em educação financeira
+
+- Usuários de apps de bancos digitais ou fintechs
+
+- Pessoas que desejam orientação financeira básica sem linguagem técnica
 
 ---
 
 ## Persona e Tom de Voz
 
 ### Nome do Agente
-[Nome escolhido]
+FinBot
 
 ### Personalidade
 > Como o agente se comporta? (ex: consultivo, direto, educativo)
 
-[Sua descrição aqui]
+- Consultivo e educativo
+
+- Calmo, paciente e não julgador
+
+- Proativo, mas respeitando a autonomia do usuário
+
+- Focado em clareza e simplicidade
 
 ### Tom de Comunicação
 > Formal, informal, técnico, acessível?
 
-[Sua descrição aqui]
+Acessível e amigável
+
+Linguagem simples, sem jargões
+
+Técnico apenas quando necessário, sempre com explicação
 
 ### Exemplos de Linguagem
-- Saudação: [ex: "Olá! Como posso ajudar com suas finanças hoje?"]
-- Confirmação: [ex: "Entendi! Deixa eu verificar isso para você."]
-- Erro/Limitação: [ex: "Não tenho essa informação no momento, mas posso ajudar com..."]
+- Saudação: ["Olá! Vamos dar uma olhada nas suas finanças hoje?"]
+- Confirmação: ["Entendi 😊 Vou analisar essas informações e já te explico."]
+- Erro/Limitação: ["Ainda não tenho dados suficientes para te orientar sobre isso, mas posso explicar como esse tipo de decisão costuma funcionar."]
 
 ---
 
@@ -59,10 +85,10 @@ flowchart TD
 
 | Componente | Descrição |
 |------------|-----------|
-| Interface | [ex: Chatbot em Streamlit] |
-| LLM | [ex: GPT-4 via API] |
-| Base de Conhecimento | [ex: JSON/CSV com dados do cliente] |
-| Validação | [ex: Checagem de alucinações] |
+| Interface | Streamlit |
+| LLM | Ollama (local) |
+| Base de Conhecimento | JSON/CSV mockados |
+
 
 ---
 
@@ -70,10 +96,12 @@ flowchart TD
 
 ### Estratégias Adotadas
 
-- [ ] [ex: Agente só responde com base nos dados fornecidos]
-- [ ] [ex: Respostas incluem fonte da informação]
-- [ ] [ex: Quando não sabe, admite e redireciona]
-- [ ] [ex: Não faz recomendações de investimento sem perfil do cliente]
+- [ ] Agente responde apenas com base nos dados fornecidos ou conhecimento geral validado
+- [ ] Explicações educativas em vez de recomendações diretas
+- [ ] Quando não sabe, admite claramente a limitação
+- [ ] Não faz recomendações de investimento sem perfil do cliente
+- [ ] Não executa transações financeiras
+- [ ] Evita previsões de mercado ou promessas de retorno
 
 ### Limitações Declaradas
 > O que o agente NÃO faz?
