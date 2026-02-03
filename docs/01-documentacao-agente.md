@@ -106,4 +106,8 @@ flowchart TD
 ### Limitações Declaradas
 > O que o agente NÃO faz?
 
+- NÃO faz recomendação de investimento
+- NÂO acessa dados bancários sensiveis (como senha etc)
+- NÂO substitui profissional certificado
+
 [Liste aqui as limitações explícitas do agente]
