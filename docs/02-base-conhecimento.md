@@ -26,13 +26,18 @@ Metadados auxiliares (ex.: limite mensal, objetivos financeiros)
 ## Estratégia de Integração
 
 ### Como os dados são carregados?
-Banco de dados
+``` python
 
-API interna
+import json
+import pandas as pd
 
-Serviço de retrieval (RAG)
+# ===== CARREGAR DADOS ====== #
+perfil = json.load(open('./data/perfil_investidor.json'))
+transacoes = pd.read_csv(open('./data/transacoes.csv'))
+historico = pd.read_csv(open('./data/historico_atendimento.csv'))
+produto = json.load(open('./data/produtos_financeiros.json'))
 
-[ex: Os JSON/CSV são carregados no início da sessão e incluídos no contexto do prompt]
+```
 
 ### Como os dados são usados no prompt?
 > Os dados vão no system prompt? São consultados dinamicamente?
